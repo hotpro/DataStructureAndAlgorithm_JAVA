@@ -50,6 +50,8 @@ public class SinglyLinkedList<T> {
 
 	public T removeLast() {
 		if (this.head == null) return null;
+		
+		// chris: smart
 		SinglyLinkedListNode<T> temp = this.head;
 		SinglyLinkedListNode<T> prev = temp;
 		while (temp.getNext() != null) {

@@ -22,8 +22,8 @@ public class LLReverse {
 			SinglyLinkedListNode<Integer> head) {
 		SinglyLinkedListNode<Integer> next;
 		SinglyLinkedListNode<Integer> result = head;
-		if (head == null)
-			return null;
+//		if (head == null)
+//			return null;
 		if (head.getNext() != null) {
 			next = head.getNext();
 			result = reverse2(next);
@@ -50,7 +50,7 @@ public class LLReverse {
 		Integer[] datalist = { 2, 1, 2, 3, 3, 4, 3, 5 };
 		SinglyLinkedListNode<Integer> root = ll.generateList(datalist);
 		LLReverse rev = new LLReverse();
-		System.out.println(rev.reverse2(root,null));
+		System.out.println(rev.reverse2(root));
 
 	}
 

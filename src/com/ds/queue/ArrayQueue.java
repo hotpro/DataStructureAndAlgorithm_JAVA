@@ -2,7 +2,7 @@ package com.ds.queue;
 
 public class ArrayQueue<AT> implements IQueue<AT> {
 
-	private static final int DEFAULT_CAPACITY = 6;
+	private static final int DEFAULT_CAPACITY = 2;
 	private AT[] array;
 	private int nItems,front,end;
 	
@@ -25,7 +25,8 @@ public class ArrayQueue<AT> implements IQueue<AT> {
 			front = 0;
 			end = oldsize;
 		}
-		end++;
+		end++;// chris: bug 1 what will happen if end == 0;
+		// bug 2, end is a int, it should be (++end == array.length) ? 0 : end;
 		array[end%array.length] = item;
 		nItems++;
 		
@@ -61,7 +62,11 @@ public class ArrayQueue<AT> implements IQueue<AT> {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		ArrayQueue<Integer> aq = new ArrayQueue<Integer>();
+		aq.enqueue(1);
+		int i = aq.peekFront(); // bug
+		// please refer to jdk ArrayBlockingQueue
+		
 		
 	}
 

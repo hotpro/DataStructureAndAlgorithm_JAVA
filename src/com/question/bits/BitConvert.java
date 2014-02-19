@@ -27,6 +27,7 @@ public class BitConvert {
 
 	public static void main(String[] args) {
 		System.out.print(convertBits(31, 14));
+//		System.out.print(convertBits(-31, 14));
 	}
 
 }

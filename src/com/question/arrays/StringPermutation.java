@@ -42,8 +42,8 @@ public class StringPermutation {
 
 	public static void main(String[] args) {
 		StringPermutation perm = new StringPermutation();
-		String str1 = "";
-		String str2 = "";
+		String str1 = "dabc";
+		String str2 = "acbd";
 		if(perm.isPermutation(str1.toCharArray(), str2.toCharArray()))
 			System.out.println(str2 + " is permutation of " + str1);
 		else 
